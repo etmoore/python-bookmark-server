@@ -45,23 +45,34 @@ from urllib.parse import unquote, parse_qs
 
 memory = {}
 
-form = '''<!DOCTYPE html>
-<title>Bookmark Server</title>
-<form method="POST">
-    <label>Long URI:
-        <input name="longuri">
-    </label>
-    <br>
-    <label>Short name:
-        <input name="shortname">
-    </label>
-    <br>
-    <button type="submit">Save it!</button>
-</form>
-<p>URIs I know about:
-<pre>
-{}
-</pre>
+form = '''
+<!DOCTYPE html>
+<head>
+    <title>Bookmark Server</title>
+</head>
+<body>
+    <p>
+        <strong>Instructions:</strong>
+        Enter the URI (address) and short name, then click "Save it!" to create a
+        bookmark. To visit bookmarks you've already saved, append the short name
+        to this site's URI path.
+    </p>
+    <form method="POST">
+        <label>Long URI:
+            <input name="longuri">
+        </label>
+        <br>
+        <label>Short name:
+            <input name="shortname">
+        </label>
+        <br>
+        <button type="submit">Save it!</button>
+    </form>
+    <p>URIs I know about:
+    <pre>
+    {}
+    </pre>
+</body
 '''
 
 
